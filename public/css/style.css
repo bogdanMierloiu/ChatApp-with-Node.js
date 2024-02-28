@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+#sidebar {
+    height: calc(100% - 56px); /* Înălțimea ferestrei minus înălțimea barei de navigare */
+    width: 150px;
+    position: fixed;
+    top: 56px; /* Înălțimea barei de navigare */
+    left: 0;
+    background-color: #f8f9fa;
+    padding-top: 60px; /* Înălțimea barei de navigare sus */
+}
+
+#main-content {
+    margin-left: 150px; /* Lățimea sidebar-ului */
+    height: calc(100% - 56px); /* Înălțimea ferestrei minus înălțimea barei de navigare */
+    /*overflow-y: auto; !* Face ca conținutul principal să fie scrolabil atunci când este necesar *!*/
+    padding-top: 56px; /* Înălțimea barei de navigare sus */
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #657F87;
+}
+
+#conversation {
+    margin-top: 10px; /* Elimină margin-top pentru a alinia începutul tabelului cu marginea de sus a paginii */
+    overflow-y: auto; /* Asigura scroll-ul daca lista de mesaje devine prea lunga */
+    height: calc(100% - 100px); /* Înălțimea maximă a containerului de mesaje */
+}
+
+#message-form {
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 150px); /* Lățimea ferestrei minus lățimea sidebar-ului */
+    height: 100px;
+    margin: 10px;
+    background-color: #ffffff;
+    border-top: 1px solid #e4e4e4;
+}
+
+#messages {
+    overflow-y: auto; /* Face ca containerul de mesaje să facă scrolling vertical */
+    max-height: calc(100vh - 200px); /* Înălțimea maximă a containerului de mesaje */
+    position: fixed;
+    bottom: 110px; /* Înălțimea input-ului de mesaje + marginea */
+    width: calc(100% - 160px); /* Lățimea disponibilă minus lățimea sidebar-ului */
+}
